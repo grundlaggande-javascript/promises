@@ -43,3 +43,30 @@ fetchData()
     });
 
 console.log("End"); // This gets logged before the promise
+
+// Async function to fetch a random useless fact
+async function fetchRandomFact() {
+    try {
+        console.log("Fetching fact...");
+
+        const response = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random?language=en");
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json(); // Wait for the JSON parsing
+        console.log("Fact fetched:", data.text); // Log the fact
+
+    } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+        return "Failed to fetch the fact";
+    }
+}
+
+console.log("Start");
+
+fetchRandomFact(); // Asynchronous, won't block the next line
+
+console.log("Other synchronous code running...");
+
