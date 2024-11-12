@@ -23,15 +23,16 @@ Now try to rewrite the functions using either async/await or .then() depending o
 
 ---
 
-### **Exercise 4: Fetch Multiple Jokes**
+### Larger exercise: Dictionary app
+
+Create a webpage that allows you to lookup the definition for a word via a form. The user should be able to enter a random word and then be able to read its definition. To access definitions you can use: https://dictionaryapi.dev/.
+
+Next, try to implement error messages when the users searches for words that does not exist.
+
+---
+
+### **Advanced Exercise 4: Fetch Multiple Jokes**
 
 It's time to get real humorous! Display three jokes to the user instead of just one. Make sure that every joke is fetched concurrently. Tip: Look up Promise.all()
 
 **Challenge**: Use `Promise.all()` to fetch all three facts **concurrently** and log them once all requests are complete.
-
----
-
-### Larger exercise: Dictionary app
-Create a webpage that allows you to lookup the definition for a word via a form. The user should be able to enter a random word and then be able to read its definition. To access definitions you can use: https://dictionaryapi.dev/.
-
-Next, try to implement error messages when the users searches for words that does not exist.
