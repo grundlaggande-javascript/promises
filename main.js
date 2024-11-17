@@ -5,7 +5,7 @@ const randomFact = document.getElementById("random-fact");
 // Fetching from this URL.
 fetch("https://uselessfacts.jsph.pl/api/v2/facts/random")
     .then((response) => {
-        return response.json(); // We try to read the response body in json-format.
+        return response.json(); // We try to read the response body in json-format. (JavaScript Object Notation)
     })
     .then((response) => {
         randomFact.textContent = response.text; // When JSON is parsed we update the textContent of the randomFact variable
